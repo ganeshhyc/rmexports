@@ -5,4 +5,12 @@ app.directive('navbar',function(){
             navbarvar : '='
         }
     }
-})
+});
+app.directive('footer',function(){
+    return {
+        templateUrl : 'app/component/footer.html',
+        scope : {
+            navbarvar : '='
+        }
+    }
+});

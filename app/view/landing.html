@@ -1,62 +1,116 @@
-<navbar></navbar><br><br>
-<div class="container-fluid" ng-controller="landingCtrl">
-    <button class="btn" ng-class="!_toggleFlag?'btn-warning':'btn-success'" ng-click="_toggleEdit()">{{_toggleFlag?'MAKE TABLE':'EDIT TABLE'}}</button>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-            <th scope="col" ng-if="_columnData.length > 0" ng-repeat="__column in _columnData">
-                {{__column.label}}
-                <a class="text-danger" ng-click="_deleteCol(__column.id)" ng-if="_toggleFlag"><i class="fas fa-times-circle"></i></a></th>
-            <th scope="col" class="text-center" ng-if="_toggleFlag">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle btn-lg btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Add Column
-                    </button>
-                    
-                    <!-- <button class="btn btn-primary btn-circle float-center" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-caret-down"></i>
-                    </button> -->
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" ng-repeat="_column in _columns" ng-click="_makeColumn(_column)">{{_column.label}}</a>
+<navbar></navbar>
+        <div class="container-fluid pd-0">
+            <div class="row top-row section pd-top-50">
+                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                    <img src="assets/hero_image_850px.png" class="img-responsive">
+                </div>
+                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                    <div class="row heading">
+                        <div class="col-lg-12">
+                            <p class="h-font raleway">
+                                Becoming the best Label <span class="primary-color"> Solution</span> Supplier
+                            </p>
+                            <p class="f-16 text-left lh-26 hidden-xs">RM exports provide you the best quality label with water, dust and fireproof protection. If you are starting a new clothing business, we provide the best label material, Showcase your brand name and get inspired, contact us today.</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="email" class="email-input" placeholder="Enter your email ID">
+                        </div>
+                        <div class="col-lg-12 pd-top-25">
+                            <button class="btn p-button">CONTACT US</button>
+                        </div>
                     </div>
                 </div>
-            </th>
-            <th scope="col" ng-if="_toggleFlag">
-                <button class="btn btn-secondary btn-circle float-right" ng-click="addRows()">
-                    <i class="fas fa-plus"></i>
-                </button>
-            </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="_row in _rowData" ng-init="parentIndex = $index">
-                <td ng-repeat="_input in _columnData" ng-init="_tempData">
-                    <form>
-                        <span ng-if="_input.type =='textbox'">
-                            <textarea ng-model="_tempData" ng-change="_inputData(parentIndex, $index, _input.type, _tempData)" ng-hide="!_toggleFlag"></textarea>{{!_toggleFlag?_tempData:''}}
-                        </span>
-                        <span ng-if="_input.type =='date'">
-                            <input class="form-control" type="date" ng-model="_tempData" ng-change="_inputData(parentIndex, $index, _input.type, _tempData)"  ng-hide="!_toggleFlag">{{!_toggleFlag?(_tempData|date):''}}
-                        </span>
-                        <span ng-if="_input.type =='checkbox'">
-                            <input class="form-control" type="{{_input.type}}" ng-model="_tempData" ng-change="_inputData(parentIndex, $index, _input.type, _tempData)"  ng-hide="!_toggleFlag">
-                            <span ng-if="!_toggleFlag && _tempData"><i class="fas fa-check"></i></span>
-                            <span ng-if="!_toggleFlag && (_tempData==false || _tempData=='' || _tempData == undefined)"><i class="fas fa-times"></i></span>
-                        </span>
-                        <span ng-if="_input.type !=='textbox' && _input.type !=='checkbox' && _input.type !=='date'">
-                            <input class="form-control" type="{{_input.type}}" ng-model="_tempData" ng-change="_inputData(parentIndex, $index, _input.type, _tempData)"  ng-hide="!_toggleFlag">{{!_toggleFlag?_tempData:''}}
-                        </span>
-                    </form>
-                </td>
-                <td class="text-center" ng-if="_toggleFlag">
-                    <button class="btn btn-danger btn-circle float-center" ng-click="deleteRows(_row.id)">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                
-            </tr>
-        </tbody>
-    </table>
-</div>
+            </div>
+            <div class="bg-fb section">
+                <div class="container">
+                    <div class="row pd-top-50 pd-bottom-70">
+                        <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-5 col-xs-6 h-130">
+                                    <img src="assets/point_a.png" style="height:100px" class="img-responsive mg-auto">
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-7 col-xs-6">
+                                    <div class="point-font">
+                                        <h1 class="f-40 f-weight-800 primary-color">140</h1>
+                                        <span class="f-16 f-weight-800">Cities we supply</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-5 col-xs-6 h-130">
+                                    <img src="assets/point_b.png" style="height:100px"  class="img-responsive mg-auto">
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-7 col-xs-6">
+                                    <div class="point-font">
+                                        <h1 class="f-40 f-weight-800 primary-color">4200+</h1>
+                                        <span class="f-16 f-weight-800">Parties we have</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-5 col-xs-6 h-130">
+                                    <img src="assets/point_c.png" style="height:100px"  class="img-responsive mg-auto">
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-7 col-xs-6">
+                                    <div class="point-font">
+                                        <h1 class="f-40 f-weight-800 primary-color">2000+</h1>
+                                        <span class="f-16 f-weight-800">Products we form</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 pd-top-25">
+                            <p class="point-font f-16">
+                                The company implements a sustainable development strategy and takes the lead in the industry to carry out large-scale system transformation of energy, water and steam recycling systems, research and development of renewable products, and contribute their own environmental protection efforts in the industrial chain.
+RM exports is your reliable partner.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row pd-top-50 pd-bottom-70 sm-top-20 sm-bottom-20">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-right">
+                        <img src="assets/section1_image.png" class="img-responsive">
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 pd-top-25">
+                        <p class="h-font raleway p-margin-bottom-20">
+                            Including <span class="primary-color">fast-selling</span> clothing, sportswear, formal wear, denim, underwear...
+                        </p><br>
+                        <p class="f-16 p-margin-bottom-20">When choosing a strip as a trademark strip for logistics,</p>
+                        <p class="f-16 p-margin-bottom-20">It is often necessary to consider the characteristics of the trademark strip fabric,</p>
+                        <p class="f-16 p-margin-bottom-20">The softness of the strip, the comfort and the aesthetics.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-fb">
+                <div class="container">
+                    <div class="row pd-top-50 pd-bottom-50 sm-top-20">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <img src="assets/section2_image.png" class="img-responsive">
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 pd-top-25">
+                            <p class="h-font raleway p-margin-bottom-20">
+                                Sportswear application or Formalwear  <span class="primary-color">application solution</span>
+                            </p><br>
+                            <p class="f-16 p-margin-bottom-20">Polyamide & Polyester Tape, Slitted Edge Satin Tape, Polyester Tape,</p>
+                            <p class="f-16 p-margin-bottom-20">Cotton Tape, Adhesive Tape, Hot-Melt Adhesive Tape, Non-woven Tape,</p>
+                            <p class="f-16 p-margin-bottom-20">It can meet the various needs of customers without printing and widely used in different industries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center pd-top-50 pd-bottom-70">
+                <p class="h-font raleway">
+                    Get in touch with <span class="primary-color">RM Exports</span> contact us today!
+                </p>
+                <!-- <div class="pd-top-25">
+                    <button class="btn p-button">Visit now!</button>
+                </div> -->
+            </div>
+            <footer></footer>
+        </div>
