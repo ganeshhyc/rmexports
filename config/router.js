@@ -3,6 +3,12 @@ app.config(function($routeProvider){
     .when('/',{
         templateUrl : 'app/view/landing.html'
     })
+    .when('/products',{
+        templateUrl : 'app/view/product.html'
+    })
+    .when('/certificate',{
+        templateUrl : 'app/view/certificate.html'
+    })
     .otherwise({
         redirectTo : '/'
     })
