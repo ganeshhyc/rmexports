@@ -1,8 +1,8 @@
 <navbar></navbar>
-        <div class="container-fluid pd-0">
+        <div class="container-fluid pd-0" ng-controller="landingCtrl">
             <div class="row top-row section pd-top-50">
                 <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                    <img src="assets/hero_image_850px.png" class="img-responsive">
+                    <img src="assets/hero_image_850px.png" class="img-fluid img-responsive">
                 </div>
                 <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12">
                     <div class="row heading">
@@ -13,10 +13,10 @@
                             <p class="f-16 text-left lh-26 hidden-xs">RM exports provide you the best quality label with water, dust and fireproof protection. If you are starting a new clothing business, we provide the best label material, Showcase your brand name and get inspired, contact us today.</p>
                         </div>
                         <div class="col-lg-12">
-                            <input type="email" class="email-input" placeholder="Enter your email ID">
+                            <input type="email" ng-model="$root._Email" class="email-input" placeholder="Enter your email ID">
                         </div>
                         <div class="col-lg-12 pd-top-25">
-                            <button class="btn p-button">CONTACT US</button>
+                            <button class="btn p-button" data-toggle="modal" data-target="#eModal">CONTACT US</button>
                         </div>
                     </div>
                 </div>
@@ -27,41 +27,41 @@
                         <div class="col-xl-4 col-lg-4 col-md-4">
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-5 col-xs-6 h-130 text-center">
-                                    <img src="assets/point_a.png" style="height:100px" class="img-responsive mg-auto">
+                                    <img src="assets/point_a.png" style="height:100px" class="img-responsive img-fluid mg-auto">
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-7 col-xs-6">
-                                    <div class="point-font">
+                                    <div class="point-font text-center">
                                         <h1 class="f-40 f-weight-800 primary-color">140</h1>
                                         <span class="f-16 f-weight-800 raleway">Cities we supply</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div><br>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-4">
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-5 col-xs-6 h-130 text-center">
-                                    <img src="assets/point_b.png" style="height:100px"  class="img-responsive mg-auto">
+                                    <img src="assets/point_b.png" style="height:100px"  class="img-responsive img-fluid mg-auto">
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-7 col-xs-6">
-                                    <div class="point-font">
+                                    <div class="point-font text-center">
                                         <h1 class="f-40 f-weight-800 primary-color">4200+</h1>
                                         <span class="f-16 f-weight-800 raleway">Parties we have</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div><br>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-4">
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-5 col-xs-6 h-130 text-center">
-                                    <img src="assets/point_c.png" style="height:100px"  class="img-responsive mg-auto">
+                                    <img src="assets/point_c.png" style="height:100px"  class="img-responsive img-fluid mg-auto">
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-7 col-xs-6">
-                                    <div class="point-font">
+                                    <div class="point-font text-center">
                                         <h1 class="f-40 f-weight-800 primary-color">2000+</h1>
                                         <span class="f-16 f-weight-800 raleway">Products we form</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div><br>
                         </div>
                         <div class="col-xl-12 col-lg-12 col-md-12 pd-top-25">
                             <p class="point-font f-16">
@@ -75,7 +75,7 @@ RM exports is your reliable partner.
             <div class="container">
                 <div class="row pd-top-50 pd-bottom-70 sm-top-20 sm-bottom-20">
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-right">
-                        <img src="assets/section1_image.png" class="img-responsive">
+                        <img src="assets/section1_image.png" class="img-responsive img-fluid">
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 pd-top-25">
                         <p class="h-font raleway p-margin-bottom-20">
@@ -101,7 +101,7 @@ RM exports is your reliable partner.
                         </div>
                         
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <img src="assets/section2_image.png" class="img-responsive">
+                            <img src="assets/section2_image.png" class="img-responsive img-fluid">
                         </div>
                     </div>
                 </div>
@@ -114,5 +114,7 @@ RM exports is your reliable partner.
                     <button class="btn p-button">Visit now!</button>
                 </div> -->
             </div>
+            
+           <contact></contact>
             <footer></footer>
         </div>

@@ -9,6 +9,9 @@ app.config(function($routeProvider){
     .when('/certificate',{
         templateUrl : 'app/view/certificate.html'
     })
+    .when('/about',{
+        templateUrl : 'app/view/about.html'
+    })
     .otherwise({
         redirectTo : '/'
     })

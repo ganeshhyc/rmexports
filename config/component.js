@@ -10,7 +10,15 @@ app.directive('footer',function(){
     return {
         templateUrl : 'app/component/footer.html',
         scope : {
-            navbarvar : '='
+            footervar : '='
+        }
+    }
+});
+app.directive('contact',function(){
+    return {
+        templateUrl : 'app/component/contact.html',
+        scope : {
+            contactvar : '='
         }
     }
 });

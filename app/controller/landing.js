@@ -1,3 +1,3 @@
-app.controller("landingCtrl",function($scope){
+app.controller("landingCtrl",function($rootScope,$scope){
     
 })

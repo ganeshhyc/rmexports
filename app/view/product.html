@@ -1,5 +1,513 @@
 <navbar></navbar>
 <div class="container-fluid pd-0">
+<style class="cp-pen-styles">@import url("https://fonts.googleapis.com/css?family=Poppins");
+img {
+  max-width: 100%; }
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+ul, li {
+  list-style-type: none; }
+
+li {
+  display: inline-block;
+  width: 100%; }
+
+#logo {
+  font-size: 1.5rem;
+  display: inline-block;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 100px;
+  line-height: 1.5rem; }
+
+header {
+  position: relative;
+  height: 50px; }
+  header nav {
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: inline-block; }
+    header nav #burger-menu {
+      display: inline-block; }
+
+.user-area {
+  display: inline-block;
+  float: right; }
+  .user-area i {
+    padding-left: 20px; }
+  .user-area:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.text-wrap {
+  text-align: center; }
+
+#slider {
+  position: relative;
+  height: calc(100% - 50px); }
+
+.slides {
+  padding: 0;
+  position: relative;
+  margin: 2em auto;
+  width: 85%;
+  height: 100%; }
+  .slides li {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.65s ease-in-out;
+    -o-transition: opacity 0.65s ease-in-out;
+    transition: opacity 0.65s ease-in-out; }
+    .slides li.active {
+      opacity: 1;
+      -webkit-transition: opacity 0.65s ease-in-out;
+      -o-transition: opacity 0.65s ease-in-out;
+      transition: opacity 0.65s ease-in-out;
+      -webkit-transition-delay: 0.4s;
+      -o-transition-delay: 0.4s;
+      transition-delay: 0.4s; }
+      .slides li.active .animate .from-bottom {
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+        -webkit-transition: -webkit-transform 0.55s ease;
+        transition: -webkit-transform 0.55s ease;
+        -o-transition: transform 0.55s ease;
+        transition: transform 0.55s ease;
+        transition: transform 0.55s ease, -webkit-transform 0.55s ease;
+        -webkit-transition-delay: 0.45s;
+        -o-transition-delay: 0.45s;
+        transition-delay: 0.45s; }
+      .slides li.active .animate .from-left {
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.55s ease;
+        transition: -webkit-transform 0.55s ease;
+        -o-transition: transform 0.55s ease;
+        transition: transform 0.55s ease;
+        transition: transform 0.55s ease, -webkit-transform 0.55s ease;
+        -webkit-transition-delay: 0.45s;
+        -o-transition-delay: 0.45s;
+        transition-delay: 0.45s; }
+  .slides .slide-image {
+    width: 50%;
+    float: left;
+    padding: 0 50px;
+    text-align: center;
+    overflow: visible; }
+    .slides .slide-image img {
+      max-width: 100%;
+      max-height: 36vw;
+      vertical-align: middle; }
+  .slides .slide-content {
+    max-width: 50%;
+    display: inline-block;
+    float: left;
+    padding-right: 50px;
+    text-align: right;
+    -webkit-transform: translateY(25%);
+    -ms-transform: translateY(25%);
+    transform: translateY(25%); }
     
+    @media screen and (max-width:500px){
+        
+        .slides .slide-content {
+    max-width: 100%;
+    display: inline-block;
+    float: left;
+    padding-right: 50px;
+    text-align: right;
+    -webkit-transform: translateY(25%);
+    -ms-transform: translateY(25%);
+    transform: translateY(25%); }
+        }
+    .slides .slide-content h2 {
+      font-size: 3rem;
+      line-height: 1.3em;
+      margin: 0; }
+    .slides .slide-content p {
+      padding-left: 40px;
+      font-size: 12px;
+      color: #969696;
+      line-height: 24px; }
+    .slides .slide-content .product-type {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 6px;
+      text-align: right; }
+    .slides .slide-content a {
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-align: center;
+      display: inline-block;
+      padding: 5px 20px;
+      text-decoration: none;
+      color: #000;
+      position: relative; }
+      .slides .slide-content a:hover {
+        text-decoration: none; }
+
+.slides a.shop-now:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  background-color: #dae6e6;
+  z-index: -1;
+  top: 0;
+  -webkit-transition: width 0.2s ease-out;
+  -o-transition: width 0.2s ease-out;
+  transition: width 0.2s ease-out; }
+
+.animate {
+  position: relative;
+  overflow: hidden; }
+  .animate .from-bottom {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.45s ease;
+    transition: -webkit-transform 0.45s ease;
+    -o-transition: transform 0.45s ease;
+    transition: transform 0.45s ease;
+    transition: transform 0.45s ease, -webkit-transform 0.45s ease; }
+  .animate .from-left {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.45s ease;
+    transition: -webkit-transform 0.45s ease;
+    -o-transition: transform 0.45s ease;
+    transition: transform 0.45s ease;
+    transition: transform 0.45s ease, -webkit-transform 0.45s ease; }
+
+.text-clip {
+  background: url("assets/3.webp");
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 100% 100%;
+  display: inline-block;
+  font-size: 6rem;
+  line-height: 100%;
+  background-position: center;
+  margin: 0;
+  margin-left: -80px; }
+  .text-clip span.small {
+    font-size: 3rem;
+    vertical-align: middle; }
+  .text-clip .divider {
+    width: 30px;
+    display: inline-block;
+    margin-left: 10rem;
+    margin-right: 3rem;
+    vertical-align: middle; }
+
+.slide-1 hr.slider-bottom {
+  display: inline-block;
+  border-bottom: 0px solid #969696;
+  width: 320px;
+  vertical-align: middle;
+  margin-left: -10em; }
+
+.slide-1 hr.slider-top {
+  border-bottom: 0px solid #969696;
+  margin: 3em auto;
+  width: 125px; }
+
+.slide-1 h4 {
+  display: inline-block;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding-left: 40px; }
+
+.slider-bottom-area {
+  margin-top: 100px;
+  text-align: center; }
+
+#container {
+  position: relative;
+  height: 100vh;
+  padding: 1em; }
+
+.line-two {
+  padding-left: 10rem; }
+
+.slide-label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #000;
+  display: inline-block;
+  position: absolute;
+  left: -8%;
+  top: 50%;
+  z-index: 10; }
+
+.slider-nav {
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  right: 0px;
+  bottom: 50%;
+  cursor: pointer; }
+
+.slide-nav-up, .slide-nav-down {
+  display: inline-block;
+  padding-bottom: 12px;
+  position: absolute; }
+
+.slide-nav-up {
+  bottom: 0px;
+  opacity: 0.5; }
+
+.slide-nav-down {
+  border-bottom: 1px solid #969696;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  opacity: 0.5; }
+
+footer #social-media span {
+  font-size: 0.9rem;
+  font-weight: 100;
+  padding-right: 15px; }
+</style>
+       
+        <main id="container">
+        <br><br><br>
+        
+        
+        <div id="slider">
+            <ul class="slides">
+                <li class="single-slide slide-1 active">
+                    <hr class="slider-top"/>
+                    <!-- <div class="slide-label">Always Innovation</div> -->
+                    <div class="text-wrap">
+                        <h1 class="text-clip">RM Exports <br/> 
+                        <span class="line-two">
+                            <span class="divider"></span> 
+                            <span class="small">provides you</span>
+                            the
+                            <span class="small">BEST</span>
+                            </span>
+                         </h1>
+                         
+                    </div>
+                    <div class="slider-bottom-area">
+                        <hr class="slider-bottom" />
+                         <h4>RM Group</h4>
+                    </div>
+                </li>
+
+                <li class="single-slide slide-2">
+                    <!-- <div class="slide-label">Apparel</div> -->
+                    <div class="slide-image animate">
+                       <img src="assets/icons/image-1.jpg" class="from-left" alt="image-1" />     
+                    </div>
+                    
+                    <div class="slide-content">
+                        <div class="animate">
+                            <div class="product-type from-bottom">Label your clothes</div>
+                        </div>
+                        <div class="animate">
+                            <h2 class="from-bottom">
+                                100% cotton
+                            </h2>
+
+                            
+                        </div>
+
+                        <div class="animate">
+                            <h2 class="from-bottom">
+                                Water, dust and fireproof
+                            </h2>
+                        </div>
+
+                        <p>
+                            Why not brand your apparel and make it look a little bit more unique? We've got you covered from custom clothing labels.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="single-slide slide-3">
+                    <!-- <div class="slide-label">Bags</div> -->
+                    <div class="slide-image animate">
+                        <img src="assets/icons/image-2.jpg" class="from-left" alt="image-2" />
+                    </div>    
+                    <div class="slide-content">
+                        <div class="animate">
+                            <div class="product-type from-bottom">Label Stationaries</div>
+                        </div>
+                       <div class="animate">
+                            <h2 class="from-bottom">
+                                For Bags
+                            </h2>
+
+                            
+                        </div>
+
+                        <div class="animate">
+                            <h2 class="from-bottom">
+                                and other stationaries
+                            </h2>
+                        </div>
+                        <p>
+                            Looking for custom bag labels professionally printed with your label design that is a perfect fit for your products, RM exports are here to help you.
+                        </p>
+                    </div>
+                </li>
+
+                 <li class="single-slide slide-4">
+                    <!-- <div class="slide-label">Shoes</div> -->
+                    <div class="slide-image animate">
+                        <img src="assets/icons/image-3.jpg" class="from-left" alt="image-3" />
+                    </div>
+                    <div class="slide-content">
+                        <div class="animate">
+                            <div class="product-type from-bottom">Label you shoes</div>
+                        </div>
+                       <div class="animate">
+                            <h2 class="from-bottom">
+                                For Shoes
+                            </h2>
+                           
+                            
+                        </div>
+
+                        <div class="animate">
+                             <h2 class="from-bottom">
+                                or other footwears
+                            </h2>
+                        </div>
+                        <p>
+                            Our stick-on labels for shoes are simple to use and long-lasting, allowing you to easily identify your written.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="single-slide slide-4">
+                    <!-- <div class="slide-label">Other Accessories</div> -->
+                    <div class="slide-image animate">
+                        <img src="assets/icons/image-4.jpg" class="from-left" alt="image-3" />
+                    </div>
+                    <div class="slide-content">
+                        <div class="animate">
+                            <div class="product-type from-bottom">Label your caps</div>
+                        </div>
+                       <div class="animate">
+                            <h2 class="from-bottom">
+                                For Caps,
+                            </h2>
+                           
+                            
+                        </div>
+
+                        <div class="animate">
+                             <h2 class="from-bottom">
+                                Hats or other props
+                            </h2>
+                        </div>
+                        <p>
+                            We, at RM Exports, have clothing labels and sewing labels, print and also care about labels
+                        </p>
+                    </div>
+                </li>
+                
+            </ul>
+
+            <div class="slider-nav">
+                <div class="slide-nav-up"><img src="assets/icons/up-arrow.png" alt="up"></div>
+                <div class="slide-nav-down"><img src="assets/icons/up-arrow.png" alt="down"></div>
+            </div>
+        </div>
+      
+         <!--<footer>
+            <div id="social-media">
+                <span>Facebook</span>
+                <span>Twitter</span>
+                <span>Google +</span>
+            </div>
+        </footer>-->
+
+        </main>
+       
+        <script src="js/TweenMax.min.js"></script>    
+        <script src="js/jquery.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js'></script>
+<script >jQuery(document).ready(function ($) {
+
+    'use strict';
+
+    var slider = $('#slider');
+    var slidesWrapper = $('.slides');
+    var slides = $('.slides li');
+    var activeSlide = $('.slides.active');
+
+    var timer = function() {
+        setInterval(changeSlide, 7500);
+    }
+
+    function changeSlide() {
+        var a = slidesWrapper.find('.active');
+        
+        var b = a.next('li');
+        
+        if( b.length === 0 ) {
+            console.log();
+            a.removeClass('active');
+            slides.first().addClass('active');
+        } else {
+            a.removeClass('active');
+            b.addClass('active');
+        }
+        //
+    }
+
+    timer();
+
+    $('.slide-nav-down').click(function(e) {
+        clearInterval(changeSlide);
+        changeSlide();
+    
+    });
+
+    $('.slide-nav-down').on('mousedown', function() {
+        $(this).css({'opacity': 1});
+    });
+
+    $('.slide-nav-down').on('mouseup', function() {
+        $(this).css({'opacity': 0.5});
+    });
+  
+});    
+
+//# sourceURL=pen.js
+</script>
     <!-- <footer></footer> -->
 </div>
+
+<div class="container-fluid pd-0"style="padding-top: 50px;">
+        <contact></contact>
+    
+        <footer></footer>   
+    </div>

@@ -1,0 +1,57 @@
+ <div class="modal fade" ng-controller="contactCtrl" id="eModal" tabindex="-1" role="dialog" aria-labelledby="eModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eModalLabel">Contact Us</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Name*</label>
+              <input type="text" ng-model="_Name" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Phone No</label>
+              <input type="text" class="form-control" ng-model="_Phone" id="recipient-email">
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Email ID*</label>
+              <input type="email" class="form-control" ng-model="$root._Email" id="recipient-email">
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Subject*</label>
+              <input type="text" class="form-control" ng-model="_Subject" id="recipient-subject">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message*</label>
+              <textarea class="form-control" ng-model="_Message" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-info border-0" data-dismiss="modal" style="background: #33c2ff;" ng-click="_sendEmail(_Name,$root._Email,_Subject,_Message,_Phone)" >Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="eModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Successfully recorded</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Your Message is been recieved, we will contact you soon.
+      </div>
+    </div>
+  </div>
+</div>
